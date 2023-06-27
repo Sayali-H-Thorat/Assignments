@@ -1,0 +1,47 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Problem Statement: Write a program which accept one number from user and print even factors of that number
+//
+//Input: 24
+//Output: 2 4 6 8 10 12
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Function Name: DisplayFactor()
+// Description :  Accept one numbers from user and display the even factors that number
+// Input :        Integer
+// Output :       (Integer)Even factors
+// Author :       Sayali Hanumant Thorat
+// Date :         19/10/2022
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void DisplayFactor(int iNo)
+{
+    int i = 0;
+
+    if(iNo <= 0)
+    {
+        iNo = -iNo;
+    }
+    for(i = 2; i <= (iNo/2); i = i + 2)
+    {
+        if(iNo % i ==0)
+        {
+            printf("%d\t", i);
+        }
+    }
+}
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter number : \n");
+    scanf("%d", &iValue);
+
+    DisplayFactor(iValue);
+
+    return 0;
+}
