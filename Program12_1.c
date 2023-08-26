@@ -1,0 +1,60 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Problem Statement: Write a program which accept number from user and display its digits in reverse order.
+//
+//Input:  2395
+//Output: 5932
+//
+//Input:  1018
+//Output: 8101    
+//
+//Input:  -1018
+//Output: 8101
+//
+//Input:  9000
+//Output: 0009
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Function Name:     DisplayDigit()
+// Description :      Accept number from user and display it in reverse order
+// Input :            Integer
+// Output :           Reverse Digits(Integer)
+//Time Complexity:    N
+// Author :           Sayali Hanumant Thorat
+// Date :             06/11/2022
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void DisplayDigit(int iNo)
+{
+    int iDigit = 0;
+
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    while(iNo != 0)
+    {
+        iDigit = iNo % 10;
+        printf("%d", iDigit);
+        iNo = iNo / 10;
+    }
+}
+
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter the number:\n");
+    scanf("%d", &iValue);
+
+    DisplayDigit(iValue);
+
+    return 0;
+
+
+}
